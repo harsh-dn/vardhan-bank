@@ -2,7 +2,6 @@
 /** @jsx jsx */
 
 import { css, jsx } from "@emotion/react";
-import image from "./images/4046565.jpg";
 import { Link } from "react-router-dom";
 import Slide from "./Slide";
 import his from './images/waiting-list.png';
@@ -86,7 +85,7 @@ const CSS = css`
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    height: 45vh;
+    height: 35vh;
     color: var(--navy-blue);
 
     .headline {
@@ -124,7 +123,7 @@ const CSS = css`
     .banner {
       flex-direction: column;
       justify-content: space-around;
-      height: 100vh;
+      height: 60vh;
 
       .headline {
         margin-left: 10px;

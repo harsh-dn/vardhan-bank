@@ -3,10 +3,10 @@
 
 import { css, jsx } from "@emotion/react";
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import bank from './images/hand-money-rupee-coin.svg';
+import { NavLink } from 'react-router-dom';
 
 
 function Navbar() {
@@ -58,7 +58,7 @@ function Navbar() {
         zIndex="9999999"
       />
       <nav css={CSS} ref={size}>
-        <Link className="under" to="/">
+        <NavLink className="under" to="/">
           <div className="logo">
             <img src={bank} />
           <div className="logo__text">
@@ -66,7 +66,7 @@ function Navbar() {
             <span>Bank</span>
           </div>
           </div>
-        </Link>
+        </NavLink>
       <button onClick={navClickHandler}>
         Menu{" "}
         {!state.active ? (
@@ -82,23 +82,23 @@ function Navbar() {
       <div className="nav__links" ref={ref}>
         <ul>
           <li>
-            <Link className="under" to="/">Home</Link>
+            <NavLink activeStyle={{background: "#427bff"}} className="under" to="/" exact={true}>Home</NavLink>
             <span className="seperator"> </span>
           </li>
           <li>
-            <Link className="under" to="/create-user">Add Customer</Link>
+            <NavLink activeStyle={{background: "#427bff"}} className="under" to="create-user">Add Customer</NavLink>
             <span className="seperator"> </span>
           </li>
           <li>
-            <Link className="under" to="/transfer">Transfer Money</Link>
+            <NavLink activeStyle={{background: "#427bff"}} className="under" to="transfer">Transfer Money</NavLink>
             <span className="seperator"> </span>
           </li>
           <li>
-            <Link className="under" to="/all-our-customers">All Customers</Link>
+            <NavLink activeStyle={{background: "#427bff"}} className="under" to="all-our-customers">All Customers</NavLink>
             <span className="seperator"> </span>
           </li>
           <li>
-            <Link className="under" to="/transactions-history">Transaction History</Link>
+            <NavLink activeStyle={{background: "#427bff"}} className="under" to="transactions-history">Transaction History</NavLink>
           </li>
         </ul>
       </div>

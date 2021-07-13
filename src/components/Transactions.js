@@ -12,9 +12,10 @@ function Transactions() {
     fetchData();
   }, [])
 
+  //db.collection('things').orderBy('createdAt').startAfter(today)
   const fetchData = () => {
     db
-      .collection("transactions")
+      .collection("transactions").orderBy('createdAt',"desc")
       .onSnapshot((snapshot) =>
         setState(
           snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
@@ -71,7 +72,7 @@ const CSS = css`
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
     font-size: 3rem;
-    color: var(--navy-blue);
+    color: white;
   }
 
   @media screen and (max-width: 400px) {
@@ -81,13 +82,13 @@ const CSS = css`
   }
 
   .table {
-    ${'' /* display: table;
-    overflow: scroll; */}
+    display: table;
+    overflow: scroll;
 
     table {
       table-layout: fixed;
       color: var(--powder-blue);
-      margin: 2rem 0;
+      margin: 2rem auto;
       border-collapse: collapse;
       border: 1px solid black;
 

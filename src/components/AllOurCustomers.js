@@ -36,7 +36,7 @@ function AllOurCustomers() {
               <td>Aadhar Number</td>
               <td>Account Number</td>
               <td>Current Balance</td>
-              <td><ion-icon name="cash-outline"></ion-icon></td>
+              <td>Send Money</td>
             </tr>
           </thead>
           <tbody>
@@ -68,13 +68,17 @@ const CSS = css`
   background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: "Roboto", sans-serif;
 
+.allOurCustomers{
+  text-align:center;
+}
+
   h1 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
     font-size: 3rem;
-    color: var(--navy-blue);
+    color: white;
   }
   @media screen and (max-width: 400px) {
     h1 {
@@ -93,7 +97,7 @@ const CSS = css`
     table {
       table-layout: fixed;
       color: var(--powder-blue);
-      margin: 2rem 0;
+      margin: 2rem auto;
       border-collapse: collapse;
       border: 1px solid black;
 

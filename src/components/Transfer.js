@@ -89,7 +89,7 @@ const Transfer = (props) => {
 
   return (
     <div className="transfer" css={CSS}>
-      <h1>Transfer:</h1>
+      <h1>Transfer Money</h1>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form__item">
           <label htmlFor="from" className="label">
@@ -142,7 +142,6 @@ const Transfer = (props) => {
 
 const CSS = css`
   width: 100%;
-  height: calc(100vh - 1.5rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,12 +152,11 @@ const CSS = css`
 
   h1 {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-family: "Roboto", sans-serif;
     font-size: 3rem;
-    color: var(--navy-blue);
-    text-decoration: underline;
+    color: white;
   }
 
   @media screen and (max-width: 400px) {

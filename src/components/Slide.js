@@ -55,6 +55,34 @@ const Slide = (props) => {
     setActiveIndex(newIndex);
   }
 
+  // const slides = items.map((item) => {
+  //   return (
+  //     <CarouselItem
+  //       onExiting={() => setAnimating(true)}
+  //       onExited={() => setAnimating(false)}
+  //       key={item.src}
+  //     >
+  //       <div class="d-flex justify-content-center">
+  //         <img style={{ width: "50%", margin: 'auto' }} src={item.src} alt={item.altText} />
+  //       </div>
+  //       {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
+  //     </CarouselItem>
+  //   );
+  // });
+
+  // return (
+  //   <Carousel
+  //     activeIndex={activeIndex}
+  //     next={next}
+  //     previous={previous}
+  //   >
+  //     <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+  //     {slides}
+  //     <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+  //     <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+  //   </Carousel>
+  // );
+
   const slides = items.map((item) => {
     return (
       <CarouselItem
@@ -63,9 +91,8 @@ const Slide = (props) => {
         key={item.src}
       >
         <div class="d-flex justify-content-center">
-          <img style={{ width: "50%", margin: 'auto' }} src={item.src} alt={item.altText} />
+          <img style={{ width: "60%", margin: 'auto' }} src={item.src} alt={item.altText} />
         </div>
-        {/* <CarouselCaption captionText={item.caption} captionHeader={item.caption} /> */}
       </CarouselItem>
     );
   });
@@ -78,8 +105,8 @@ const Slide = (props) => {
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
       {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      <CarouselControl direction="prev" directionText=" " onClickHandler={previous} />
+      <CarouselControl direction="next" directionText=" " onClickHandler={next} />
     </Carousel>
   );
 }

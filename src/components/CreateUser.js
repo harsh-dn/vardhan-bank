@@ -3,7 +3,9 @@
 
 import { css, jsx } from "@emotion/react";
 import { useState } from "react";
-import { addUser } from './firebase'
+import { addUser } from './firebase';
+import { toast } from "react-toastify";
+
 
 function CreateUser() {
   const [state, setState] = useState({
@@ -18,6 +20,7 @@ function CreateUser() {
     event.preventDefault();
     state.db[state.Account] = [state.Name, state.Aadhar, state.Account, state.Balance]
     addUser(state.db[state.Account])
+    toast.success("Customer Added Sucessfully");
     setState({...state, Name: "", Aadhar:"", Account: "", Balance: ""})
   }
 
@@ -111,8 +114,7 @@ const CSS = css`
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
     font-size: 3rem;
-    color: var(--navy-blue);
-    text-decoration: underline;
+    color:white;
   }
 
   @media screen and (max-width: 400px) {
@@ -127,7 +129,7 @@ const CSS = css`
     justify-content: center;
     ${'' /* background-color: #FF4F8B; */}
     background: -webkit-linear-gradient(to left, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     padding: 50px;
     margin: 0 auto;
