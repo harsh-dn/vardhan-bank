@@ -15,7 +15,7 @@ function Transactions() {
   //db.collection('things').orderBy('createdAt').startAfter(today)
   const fetchData = () => {
     db
-      .collection("transactions").orderBy('createdAt',"desc")
+      .collection("transactions").orderBy('createdAt','desc')
       .onSnapshot((snapshot) =>
         setState(
           snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
